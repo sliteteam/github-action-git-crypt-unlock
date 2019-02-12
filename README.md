@@ -23,3 +23,13 @@ action "Unlock secrets" {
     ```sh
     git-crypt export-key ./tmp-key && cat ./tmp-key | base64 | pbcopy && rm ./tmp-key
     ```
+
+## Development
+
+There are few dependencies
+
+- git-crypt
+- docker
+- node (for npm script convenience)
+
+Run tests using `npm test`
