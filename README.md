@@ -30,6 +30,11 @@ There are few dependencies
 
 - git-crypt
 - docker
-- node (for npm script convenience)
+- node (for npm script convenience and [gha](https://github.com/tschoffelen/gha) dependency)
 
-Run tests using `npm test`
+### Running tests
+
+```
+npm install
+npm test
+```
