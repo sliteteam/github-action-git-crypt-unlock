@@ -11,7 +11,7 @@ workflow "Test git-crypt" {
 }
 
 action "Unlock secrets" {
-  uses="./tools/github-actions/git-crypt-unlock"
+  uses="sliteteam/github-action-git-crypt-unlock@master"
   secrets=["GIT_CRYPT_KEY"]
 }
 ```
