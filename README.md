@@ -5,15 +5,16 @@
 ### Example Workflow file
 
 ```
-workflow "Test git-crypt" {
-  on = "push"
-  resolves = ["Unlock secrets"]
-}
-
-action "Unlock secrets" {
-  uses="sliteteam/github-action-git-crypt-unlock@master"
-  secrets=["GIT_CRYPT_KEY"]
-}
+jobs:
+  deploy:
+    name: Test git-crypt-unlock
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Unlock secrets
+        uses: sliteteam/github-action-git-crypt-unlock@1.0.1
+        env:
+          GIT_CRYPT_KEY: ${{ secrets.GIT_CRYPT_KEY }}
 ```
 
 ### Secrets
