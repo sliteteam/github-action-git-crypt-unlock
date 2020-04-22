@@ -1,0 +1,5 @@
+# Ignore IntelliJ files
+*.iml
+.idea
+
+node_modules/
