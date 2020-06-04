@@ -25,6 +25,10 @@ jobs:
     git-crypt export-key ./tmp-key && cat ./tmp-key | base64 | pbcopy && rm ./tmp-key
     ```
 
+### Run Directory
+
+You can run the git-crypt unlock command from a different directory besides GITHUB_WORKSPACE by setting a RUN_DIR env var.
+
 ## Development
 
 There are few dependencies
