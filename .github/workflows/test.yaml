@@ -1,7 +1,11 @@
 name: CD
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 jobs:
   # This workflow contains a single job called "build"
   build:
@@ -18,5 +22,7 @@ jobs:
         env:
           GIT_CRYPT_KEY: "AEdJVENSWVBUS0VZAAAAAgAAAAAAAAABAAAABAAAAAAAAAADAAAAIF85B7kFpHjz49GStZm1ctyWQv+o3qvHlbAiMB/VgJQRAAAABQAAAEC4OV4QgSqUqF1ChA9uz6JT3F80yV5KjxMm6YqBZX+zRwsgWMqK+164ptiSy+Pfo+IrPH5boZfebV6IdCHl8/4NAAAAAA=="
 
-      - name: Github Action gen-sh-unittest
-        uses: vargiuscuola/gen-sh-unittest@master
+      - name: GitHub Action to run shunit2 tests
+        uses: TheColvinCo/shunit2-github-action@v1.3
+        env:
+          SHUNIT_TEST_FOLDER: "tests/"
