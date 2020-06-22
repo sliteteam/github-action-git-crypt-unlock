@@ -1,6 +1,10 @@
 #!/bin/sh -l
 
-EXPECTED_TEXT="this is a secret file\n"
+EXPECTED_TEXT="this is a secret file"
 TEXT=$(cat test.txt)
 
-assertEquals "$EXPECTED_TEXT" "$TEXT"
+testIsUnlockingInTheRightWay() {
+  assertEquals "$EXPECTED_TEXT" "$TEXT"
+}
+
+. /usr/bin/shunit2
