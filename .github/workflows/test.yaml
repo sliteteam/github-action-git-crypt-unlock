@@ -23,4 +23,6 @@ jobs:
           GIT_CRYPT_KEY: "AEdJVENSWVBUS0VZAAAAAgAAAAAAAAABAAAABAAAAAAAAAADAAAAIF85B7kFpHjz49GStZm1ctyWQv+o3qvHlbAiMB/VgJQRAAAABQAAAEC4OV4QgSqUqF1ChA9uz6JT3F80yV5KjxMm6YqBZX+zRwsgWMqK+164ptiSy+Pfo+IrPH5boZfebV6IdCHl8/4NAAAAAA=="
 
       - name: GitHub Action to run shunit2 tests
-        uses: garciasdos/shunit2-github-action@v0.4
+        uses: garciasdos/shunit2-github-action@v1.0
+        env:
+          SHUNIT_TEST_FOLDER: "tests/"
