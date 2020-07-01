@@ -2,7 +2,7 @@
 
 set -eu
 
-if [ "${RUN_DIR}" ]; then 
+if [ -n "${RUN_DIR:-}" ]; then 
     cd ${RUN_DIR}
     echo "Running git-crypt command from ${RUN_DIR}"
 fi
