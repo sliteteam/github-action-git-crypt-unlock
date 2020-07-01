@@ -29,14 +29,6 @@ jobs:
 
 You can run the git-crypt unlock command from a different directory besides GITHUB_WORKSPACE by setting a RUN_DIR env var.
 
-## Development
-
-There are few dependencies
-
-- git-crypt
-- docker
-- node (for npm script convenience and [gha](https://github.com/tschoffelen/gha) dependency)
-
 ### Running tests
 
 ```shell script
