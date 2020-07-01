@@ -4,7 +4,7 @@
 
 ### Example Workflow file
 
-```
+```yaml
 jobs:
   deploy:
     name: Test git-crypt-unlock
@@ -39,7 +39,6 @@ There are few dependencies
 
 ### Running tests
 
-```
-npm install
-npm test
+```shell script
+./test/entrypoint_test.sh
 ```
