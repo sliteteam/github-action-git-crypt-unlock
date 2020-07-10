@@ -4,7 +4,7 @@
 
 ### Example Workflow file
 
-```
+```yaml
 jobs:
   deploy:
     name: Test git-crypt-unlock
@@ -25,17 +25,8 @@ jobs:
     git-crypt export-key ./tmp-key && cat ./tmp-key | base64 | pbcopy && rm ./tmp-key
     ```
 
-## Development
-
-There are few dependencies
-
-- git-crypt
-- docker
-- node (for npm script convenience and [gha](https://github.com/tschoffelen/gha) dependency)
-
 ### Running tests
 
-```
-npm install
-npm test
+```shell script
+./test/entrypoint_test.sh
 ```
