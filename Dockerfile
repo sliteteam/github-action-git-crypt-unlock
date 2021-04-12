@@ -1,6 +1,4 @@
-FROM alpine:3.12
-
-RUN apk --update add git-crypt git-lfs
+FROM zemuldo/git-crypt-unlock:latest
 
 WORKDIR /opt/project
 
